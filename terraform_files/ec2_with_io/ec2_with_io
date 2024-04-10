@@ -1,0 +1,18 @@
+variable "ami_value"{
+        description = "value for the ami"
+}
+
+variable "instance_typr_value"{
+        description =" value for instance type"
+}
+
+provider "aws" {
+        region ="us-east-1"
+}
+
+resource "aws_instance" "project"{
+ ami          = "var.ami_value"
+ instace_type = "var.instance_type_value"
+
+}
+
